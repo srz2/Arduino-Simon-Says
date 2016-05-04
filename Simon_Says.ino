@@ -35,24 +35,6 @@ void setup()
   m_index = 0;
   i_index = 0;
 
-  /*for(int c = 0; c < MAX_ROUNDS; c++)
-  {
-    m_queue[c] = kLED_UNK;
-    i_queue[c] = kLED_UNK;
-  }*/
-
-  m_queue[0] = 1;
-  m_queue[1] = 2;
-  m_queue[2] = 3;
-  m_queue[3] = 4;
-  m_queue[4] = 1;
-
-  i_queue[0] = 1;
-  i_queue[1] = 2;
-  i_queue[2] = 3;
-  i_queue[3] = 4;
-  i_queue[4] = 1;
-
   //Set User LEDS to OUTPUT
   pinMode(LED_YELLOW, OUTPUT);
   pinMode(LED_GREEN , OUTPUT);
@@ -74,14 +56,6 @@ void setup()
 //Sets the RGB values of the Control LED
 void setColor(int r, int g, int b)
 {
-  /*Serial.print("Control LED R:");
-  Serial.print(r);
-  Serial.print(" G:");
-  Serial.print(g);
-  Serial.print(" B:");
-  Serial.print(b);
-  Serial.print("\n");*/
-  
   analogWrite(LED_CTRL_R, 255 - r);
   analogWrite(LED_CTRL_G, 255 - g);
   analogWrite(LED_CTRL_B, 255 - b);
@@ -407,7 +381,7 @@ bool compareLast(int internal[], int index_internal, int inputted[], int index_i
 }
 
 void loop() 
-{
+{ 
   //Do Start Up
   if(!didStartup)
   {
