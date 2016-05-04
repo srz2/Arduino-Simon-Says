@@ -26,7 +26,7 @@
 #define kLED_YELLOW  3
 #define kLED_BLUE    4
 
-#define MAX_ROUNDS  32 //2 ^ 5
+#define MAX_ROUNDS  256   //Max Level given by DIP switch I used
 
 int maxRound;
 
